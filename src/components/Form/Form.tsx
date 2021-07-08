@@ -73,7 +73,7 @@ export const FormComponent = () => {
         <Flex m="7px 0" justifyContent="space-between">
           <Input
             id="company"
-            width="170px"
+            width="240px"
             placeholder="COMPANY"
             bg={main.text}
             mr="10px"
@@ -86,7 +86,7 @@ export const FormComponent = () => {
           ></Input>
           <Input
             id="phone"
-            w="150px"
+            w="200px"
             placeholder="PHONE"
             bg={main.text}
             onChange={(e) => {
@@ -97,18 +97,22 @@ export const FormComponent = () => {
             }}
           ></Input>
         </Flex>
-        <Input
-          id="message"
-          m="7px 0"
-          placeholder="YOUR MESSAGE"
-          bg={main.text}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              message: e.target.value,
-            });
-          }}
-        ></Input>
+        <Flex>
+          <Input
+            id="message"
+            m="7px 0"
+            h="100px"
+            placeholder="YOUR MESSAGE"
+            alignItems="flex-start"
+            bg={main.text}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                message: e.target.value,
+              });
+            }}
+          ></Input>
+        </Flex>
         <Flex m="7px 0" justifyContent="flex-end">
           <Button
             onClick={submit}
